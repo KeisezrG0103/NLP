@@ -186,22 +186,31 @@ elif page == "Model Training":
         st.subheader("Confusion Matrices")
 
         mcm = multilabel_confusion_matrix(y_test, y_pred.toarray())
-        cols = st.columns(3)
 
-        for i, label in enumerate(label_columns[:9]):
-            if i < 3:
-                col_idx = i
-            else:
-                col_idx = i - 3
+        # Add option to select which confusion matrices to display
+        selected_labels = st.multiselect(
+            "Select labels to display confusion matrices:",
+            label_columns,
+            default=label_columns[:3]
+        )
 
-            with cols[col_idx]:
-                fig, ax = plt.subplots(figsize=(4, 3))
-                sns.heatmap(mcm[i], annot=True, fmt='d', cmap='Blues', ax=ax)
-                plt.title(f'Confusion Matrix: {label}')
-                plt.xlabel('Predicted')
-                plt.ylabel('Actual')
-                plt.tight_layout()
-                st.pyplot(fig)
+        if selected_labels:
+            cols = st.columns(min(3, len(selected_labels)))
+
+            for idx, label in enumerate(selected_labels):
+                label_idx = label_columns.index(label)
+                col_idx = idx % min(3, len(selected_labels))
+
+                with cols[col_idx]:
+                    fig, ax = plt.subplots(figsize=(4, 3))
+                    sns.heatmap(mcm[label_idx], annot=True,
+                                fmt='d', cmap='Blues', ax=ax)
+                    plt.title(f'Confusion Matrix: {label}')
+                    plt.xlabel('Predicted')
+                    plt.ylabel('Actual')
+                    plt.tight_layout()
+                    st.pyplot(fig)
+                    plt.close(fig)  # Explicitly close figure to free memory
 
 # Page 3: Prediction
 elif page == "Prediction":
