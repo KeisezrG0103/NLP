@@ -188,7 +188,7 @@ elif page == "Model Training":
         mcm = multilabel_confusion_matrix(y_test, y_pred.toarray())
         cols = st.columns(3)
 
-        for i, label in enumerate(label_columns[:6]):  # Display first 6 labels
+        for i, label in enumerate(label_columns[:9]):
             if i < 3:
                 col_idx = i
             else:
