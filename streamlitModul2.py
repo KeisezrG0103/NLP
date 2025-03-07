@@ -193,29 +193,26 @@ elif page == "Model Training":
             st.session_state.confusion_matrices = mcm
             st.session_state.mcm_labels = label_columns
 
-        selected_labels = st.multiselect(
-            "Select labels to display confusion matrices:",
-            label_columns,
-            default=label_columns[:3]
-        )
+        st.write("Displaying confusion matrices for all 9 labels:")
 
-        if selected_labels:
-            cols = st.columns(min(3, len(selected_labels)))
+        # Create 3 rows of 3 columns for all 9 matrices
+        for row in range(3):
+            cols = st.columns(3)
 
-            for idx, label in enumerate(selected_labels):
-                label_idx = label_columns.index(label)
-                col_idx = idx % min(3, len(selected_labels))
-
-                with cols[col_idx]:
-                    fig, ax = plt.subplots(figsize=(4, 3))
-                    sns.heatmap(mcm[label_idx], annot=True,
-                                fmt='d', cmap='Blues', ax=ax)
-                    plt.title(f'Confusion Matrix: {label}')
-                    plt.xlabel('Predicted')
-                    plt.ylabel('Actual')
-                    plt.tight_layout()
-                    st.pyplot(fig)
-                    plt.close(fig)
+            for col in range(3):
+                label_idx = row * 3 + col
+                if label_idx < len(label_columns):
+                    with cols[col]:
+                        fig, ax = plt.subplots(figsize=(4, 3))
+                        sns.heatmap(mcm[label_idx], annot=True,
+                                    fmt='d', cmap='Blues', ax=ax)
+                        plt.title(
+                            f'Confusion Matrix: {label_columns[label_idx]}')
+                        plt.xlabel('Predicted')
+                        plt.ylabel('Actual')
+                        plt.tight_layout()
+                        st.pyplot(fig)
+                        plt.close(fig)
 
 # Page 3: Prediction
 elif page == "Prediction":
