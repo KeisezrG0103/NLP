@@ -193,8 +193,6 @@ elif page == "Model Training":
             st.session_state.confusion_matrices = mcm
             st.session_state.mcm_labels = label_columns
 
-        st.write("Displaying confusion matrices for all 9 labels:")
-
         # Create 3 rows of 3 columns for all 9 matrices
         for row in range(3):
             cols = st.columns(3)
