@@ -188,6 +188,11 @@ elif page == "Model Training":
         mcm = multilabel_confusion_matrix(y_test, y_pred.toarray())
 
         # Add option to select which confusion matrices to display
+        # Store confusion matrices in session state
+        if 'confusion_matrices' not in st.session_state:
+            st.session_state.confusion_matrices = mcm
+            st.session_state.mcm_labels = label_columns
+
         selected_labels = st.multiselect(
             "Select labels to display confusion matrices:",
             label_columns,
@@ -210,7 +215,7 @@ elif page == "Model Training":
                     plt.ylabel('Actual')
                     plt.tight_layout()
                     st.pyplot(fig)
-                    plt.close(fig)  # Explicitly close figure to free memory
+                    plt.close(fig)
 
 # Page 3: Prediction
 elif page == "Prediction":
