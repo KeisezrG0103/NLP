@@ -25,9 +25,7 @@ streamlit-components-v1>=1.0.0
 
 # Utilities
 pillow>=9.4.0
-
-gensim>=4.3.0
-nltk>=3.8.1
 requests>=2.28.2
 
-id_nusantara-1.1.tar.gz
+# Local package
+./id_nusantara-1.1.tar.gz
