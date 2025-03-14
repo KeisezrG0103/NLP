@@ -15,7 +15,6 @@ from collections import Counter
 import sys
 import subprocess
 import spacy
-from numpy import triu
 # Set page configuration
 st.set_page_config(page_title="Word2Vec and Clustering",
                    layout="wide", initial_sidebar_state="expanded")
