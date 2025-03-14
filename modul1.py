@@ -125,6 +125,25 @@ if st.button(f"Generate {vectorization_method} Vectors and Cluster"):
                 plt.tight_layout()
                 st.pyplot(fig)
 
+                # Add matrix visualization as table
+                st.subheader("Bag of Words Matrix Visualization")
+                # Select a subset of data for visualization
+                num_docs = min(10, doc_vectors.shape[0])
+                num_features = min(20, doc_vectors.shape[1])
+                matrix_sample = doc_vectors[:num_docs, :num_features]
+
+                # Create DataFrame for the matrix table
+                matrix_df = pd.DataFrame(
+                    matrix_sample,
+                    columns=feature_names[:num_features],
+                    index=[f"Doc {i+1}" for i in range(num_docs)]
+                )
+
+                # Display the matrix as a table
+                st.write("Document-Term Matrix (Sample)")
+                st.dataframe(matrix_df.style.highlight_max(
+                    axis=1, color='lightgreen'))
+
             elif vectorization_method == "TF-IDF":
                 # TF-IDF implementation
                 vectorizer = TfidfVectorizer(
@@ -133,23 +152,27 @@ if st.button(f"Generate {vectorization_method} Vectors and Cluster"):
                     df['clean_sentence']).toarray()
                 st.success("TF-IDF vectors created successfully!")
 
-                # Get top words with highest TF-IDF scores
+                # Get feature names for the columns
                 feature_names = vectorizer.get_feature_names_out()
 
-                # Display top words with scores
-                tfidf_scores = np.sum(doc_vectors, axis=0)
-                tfidf_df = pd.DataFrame(
-                    {'Word': feature_names, 'TF-IDF Score': tfidf_scores})
-                tfidf_df = tfidf_df.sort_values(
-                    'TF-IDF Score', ascending=False).head(20)
+                # Add matrix visualization
+                st.subheader("TF-IDF Matrix Visualization")
+                # Select a subset of data for visualization
+                num_docs = min(10, doc_vectors.shape[0])
+                num_features = min(20, doc_vectors.shape[1])
+                matrix_sample = doc_vectors[:num_docs, :num_features]
 
-                st.subheader("Top 20 Words by TF-IDF Score")
-                fig, ax = plt.subplots(figsize=(10, 6))
-                ax.bar(tfidf_df['Word'],
-                       tfidf_df['TF-IDF Score'], color='lightgreen')
-                plt.xticks(rotation=45, ha='right')
-                plt.tight_layout()
-                st.pyplot(fig)
+                # Create DataFrame for the matrix table
+                matrix_df = pd.DataFrame(
+                    matrix_sample,
+                    columns=feature_names[:num_features],
+                    index=[f"Doc {i+1}" for i in range(num_docs)]
+                )
+
+                # Display the matrix as a table
+                st.write("TF-IDF Document-Term Matrix (Sample)")
+                st.dataframe(matrix_df.style.highlight_max(
+                    axis=1, color='lightgreen'))
 
             elif vectorization_method == "GloVe":
                 # GloVe implementation
