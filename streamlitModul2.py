@@ -515,15 +515,16 @@ elif page == "Model Evaluation":
 
                     # Add color formatting
                     def color_scale(val):
+                        # Colors optimized for dark mode backgrounds
                         if isinstance(val, (int, float)) and not pd.isna(val):
                             if val > 0.9:
-                                return "background-color: #d4f7d4"  # Light green
+                                return "background-color: #22543d; color: #e6ffe6;"  # Deep green bg, light text
                             elif val > 0.7:
-                                return "background-color: #ffffcc"  # Light yellow
+                                return "background-color: #2a4365; color: #e0eaff;"  # Deep blue bg, light text
                             elif val > 0.5:
-                                return "background-color: #ffddcc"  # Light orange
+                                return "background-color: #744210; color: #ffe6cc;"  # Deep orange bg, light text
                             else:
-                                return "background-color: #ffcccc"  # Light red
+                                return "background-color: #742a2a; color: #ffeaea;"  # Deep red bg, light text
                         return ""
 
                     # Display the DataFrame with formatting
