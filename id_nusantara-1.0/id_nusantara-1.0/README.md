@@ -1,0 +1,44 @@
+| Feature | Description |
+| --- | --- |
+| **Name** | `id_nusantara` |
+| **Version** | `1.0` |
+| **spaCy** | `>=3.6.1,<3.7.0` |
+| **Default Pipeline** | `tok2vec`, `tagger`, `morphologizer`, `parser`, `trainable_lemmatizer` |
+| **Components** | `tok2vec`, `tagger`, `morphologizer`, `parser`, `trainable_lemmatizer` |
+| **Vectors** | 0 keys, 0 unique vectors (0 dimensions) |
+| **Sources** | n/a |
+| **License** | n/a |
+| **Author** | [n/a]() |
+
+### Label Scheme
+
+<details>
+
+<summary>View label scheme (250 labels for 3 components)</summary>
+
+| Component | Labels |
+| --- | --- |
+| **`tagger`** | `APP`, `ASP`, `ASP+PS3`, `ASP_PS2`, `ASP_PS3`, `ASP_T--`, `ASS`, `ASS_PS3`, `B--`, `B--+PS3`, `B--_PS3`, `B--_T--`, `CC-`, `CC-_PS3`, `CC-_T--`, `CCONJ`, `CD-`, `CD-_PS3`, `CO-`, `CO-_PS3`, `D--`, `D--+PS3`, `D--_PS2`, `D--_PS3`, `D--_T--`, `F--`, `F--+PS2`, `F--_PS1`, `F--_PS2`, `F--_PS3`, `F--_T--`, `G--`, `G--+PS3`, `G--+PS3_PS3`, `G--_T--`, `H--`, `H--_T--`, `I--`, `M--`, `M--+PS3`, `M--_F--`, `M--_T--`, `NOUN`, `NPD`, `NPD_PS2`, `NPD_PS3`, `NSD`, `NSD+PS3`, `NSD_PS1`, `NSD_PS2`, `NSD_PS3`, `NSD_T--`, `NSF`, `NSM`, `NSM_PS3`, `NUM`, `O--`, `PP1`, `PP1_T--`, `PP2`, `PP3`, `PP3_T--`, `PROPN`, `PS1`, `PS1+VSA`, `PS1_VSA`, `PS1_VSA_T--`, `PS2`, `PS2_VSA`, `PS3`, `R--`, `R--+PS3`, `R--_PS1`, `R--_PS2`, `R--_PS3`, `S--`, `S--_PS3`, `SYM`, `T--`, `VERB`, `VPA`, `VSA`, `VSA+PS2`, `VSA+PS3`, `VSA_PS1`, `VSA_PS2`, `VSA_PS3`, `VSA_T--`, `VSP`, `VSP_PS3`, `VSP_T--`, `W--`, `W--_T--`, `X--`, `Z--` |
+| **`morphologizer`** | `POS=PROPN`, `POS=AUX`, `Definite=Ind\|POS=DET\|PronType=Art`, `Number=Sing\|POS=NOUN`, `POS=PRON\|PronType=Rel`, `Mood=Ind\|POS=VERB\|Voice=Pass`, `POS=ADP`, `POS=PUNCT`, `POS=NOUN`, `POS=ADV`, `POS=CCONJ`, `POS=SCONJ`, `Mood=Ind\|POS=VERB\|Voice=Act`, `POS=VERB`, `POS=DET\|PronType=Tot`, `Number=Sing\|POS=NOUN\|Person=3\|PronType=Prs`, `Number=Plur\|POS=PRON\|Person=3\|PronType=Prs`, `POS=PRON\|PronType=Prs\|Reflex=Yes`, `POS=DET\|PronType=Dem`, `NumType=Card\|POS=NUM`, `POS=ADJ`, `Number=Plur\|POS=DET\|PronType=Ind`, `NumType=Card\|Number=Sing\|POS=NUM\|Person=3\|PronType=Prs,Tot`, `POS=PART\|Polarity=Neg`, `POS=PRON\|PronType=Int`, `Mood=Ind\|Number=Sing\|POS=VERB\|Person=3\|PronType=Prs\|Voice=Act`, `NumType=Ord\|POS=ADJ`, `Number=Sing\|POS=PRON\|Person=3\|PronType=Prs`, `POS=PRON\|PronType=Dem`, `POS=DET\|PronType=Ind`, `Number=Plur\|POS=NOUN`, `Number=Sing\|POS=PRON\|Person=1\|Polite=Form\|PronType=Prs`, `POS=ADV\|PronType=Int`, `Clusivity=In\|Number=Plur\|POS=PRON\|Person=1\|PronType=Prs`, `Definite=Def\|Mood=Ind\|POS=VERB\|PronType=Art\|Voice=Pass`, `NumType=Card\|Number=Sing\|POS=PRON\|Person=3\|PronType=Prs,Tot`, `POS=SYM`, `Degree=Sup\|POS=ADJ`, `Definite=Def\|Mood=Ind\|POS=VERB\|PronType=Art\|Voice=Act`, `POS=INTJ`, `Number=Sing\|POS=PRON\|Person=2\|Polite=Infm\|PronType=Prs`, `Number=Plur,Sing\|POS=NOUN\|Person=2\|Polite=Infm\|PronType=Prs`, `Mood=Ind\|Number=Sing\|POS=VERB\|Person=3\|PronType=Prs\|Voice=Pass`, `POS=ADV\|PronType=Ind`, `POS=PART`, `Definite=Def\|NumType=Ord\|POS=ADJ\|PronType=Art`, `Number=Sing\|POS=PRON\|Person=3\|Polite=Form\|PronType=Prs`, `Number=Sing\|POS=PROPN\|Person=3\|PronType=Prs`, `Number=Sing\|POS=PROPN\|Person=1\|Polite=Infm\|PronType=Prs`, `Number=Sing\|POS=PRON\|PronType=Ind`, `POS=VERB\|Voice=Act`, `Definite=Def\|POS=DET\|PronType=Art`, `Definite=Def\|POS=ADJ\|PronType=Art`, `Definite=Def\|Degree=Sup\|POS=ADJ\|PronType=Art`, `POS=DET\|PronType=Emp`, `POS=VERB\|Voice=Pass`, `Number=Plur,Sing\|POS=NOUN\|Person=3\|PronType=Prs`, `POS=ADV\|PronType=Dem`, `Mood=Ind\|Number=Sing\|POS=VERB\|Person=1\|Polite=Infm\|PronType=Prs\|Voice=Act`, `NumType=Card\|POS=NUM\|PronType=Tot`, `POS=NOUN\|Typo=Yes`, `POS=ADP\|Typo=Yes`, `Number=Plur\|POS=PRON\|PronType=Ind`, `Number=Sing\|POS=PRON\|Person=1\|Polite=Infm\|PronType=Prs`, `POS=VERB\|Typo=Yes\|Voice=Pass`, `POS=X`, `Definite=Def\|POS=PRON\|PronType=Art,Tot`, `POS=PRON\|PronType=Tot`, `Definite=Def\|POS=VERB\|PronType=Art`, `Number=Sing\|POS=NOUN\|Person=2\|Polite=Infm\|PronType=Prs`, `POS=SCONJ\|Typo=Yes`, `Number=Plur\|POS=PRON\|Person=2\|Polite=Infm\|PronType=Prs`, `NumType=Card\|POS=NUM\|Typo=Yes`, `Definite=Def\|POS=X\|PronType=Art`, `Number=Sing\|POS=PRON\|Person=3\|PronType=Prs\|Reflex=Yes`, `Clusivity=Ex\|Number=Plur\|POS=PRON\|Person=1\|PronType=Prs`, `Definite=Def\|NumType=Card\|POS=NUM\|PronType=Art`, `Number=Sing\|POS=PRON\|Person=2\|Polite=Form\|PronType=Prs`, `Foreign=Yes\|POS=X`, `POS=ADV\|PronType=Rel`, `Mood=Imp\|POS=VERB\|Voice=Act`, `Mood=Ind\|Number=Sing\|POS=VERB\|Person=2\|Polite=Infm\|PronType=Prs\|Voice=Act`, `Number=Sing\|POS=NOUN\|Typo=Yes`, `NumType=Ord\|Number=Sing\|POS=ADJ\|Person=3\|PronType=Prs`, `POS=PROPN\|Typo=Yes`, `POS=DET`, `Number=Sing\|POS=NOUN\|Person=1\|Polite=Infm\|PronType=Prs`, `Number=Sing\|POS=DET\|PronType=Ind`, `Definite=Def\|POS=DET\|PronType=Art,Ind`, `POS=DET\|PronType=Ind\|Typo=Yes`, `Abbr=Yes\|POS=DET\|PronType=Dem`, `Number=Sing\|POS=PRON\|Person=3\|PronType=Prs\|Typo=Yes`, `POS=PRON\|PronType=Ind`, `POS=VERB\|Typo=Yes`, `Definite=Def\|POS=NOUN\|PronType=Art`, `Abbr=Yes\|POS=PROPN`, `POS=PART\|PronType=Int`, `Abbr=Yes\|POS=PRON\|PronType=Rel`, `Degree=Sup\|Number=Sing\|POS=ADJ\|Person=3\|PronType=Prs`, `Number=Plur\|POS=PRON\|PronType=Int`, `Number=Sing\|POS=PRON\|Person=2\|Polite=Infm\|PronType=Prs\|Reflex=Yes`, `Number=Sing\|POS=ADJ\|Person=3\|PronType=Prs`, `Abbr=Yes\|POS=PART\|Polarity=Neg`, `Definite=Def\|NumType=Card\|POS=NUM\|PronType=Art,Tot`, `Number=Sing\|POS=ADJ\|Person=2\|Polite=Infm\|PronType=Prs`, `POS=ADV\|PronType=Tot`, `Abbr=Yes\|POS=ADV`, `Number=Sing\|POS=PRON\|Person=1\|Polite=Infm\|PronType=Prs\|Reflex=Yes`, `Number=Sing\|POS=PROPN\|Person=2\|Polite=Infm\|PronType=Prs`, `POS=ADV\|Typo=Yes`, `POS=X\|Typo=Yes`, `Number=Sing\|POS=X\|Person=3\|PronType=Prs\|Typo=Yes`, `Definite=Def\|Number=Plur\|POS=DET\|PronType=Art,Ind`, `Definite=Def\|Number=Sing\|POS=NOUN\|PronType=Art`, `Number=Sing\|POS=PRON\|Person=2\|PronType=Prs`, `NumType=Card\|Number=Sing\|POS=NUM\|Person=3\|PronType=Prs`, `Definite=Def\|POS=PART\|Polarity=Neg\|PronType=Art`, `POS=ADV\|PronType=Int\|Typo=Yes`, `Definite=Def\|POS=VERB\|PronType=Art\|Voice=Pass`, `POS=PART\|PronType=Dem`, `NumType=Ord\|POS=ADJ\|Typo=Yes` |
+| **`parser`** | `ROOT`, `acl`, `acl:relcl`, `advcl`, `advmod`, `amod`, `appos`, `aux`, `case`, `case:adv`, `cc`, `ccomp`, `compound`, `conj`, `cop`, `dep`, `det`, `fixed`, `flat`, `flat:foreign`, `flat:name`, `mark`, `nmod`, `nmod:poss`, `nmod:tmod`, `nsubj`, `nsubj:pass`, `nummod`, `obj`, `obl`, `obl:tmod`, `parataxis`, `punct`, `xcomp` |
+
+</details>
+
+### Accuracy
+
+| Type | Score |
+| --- | --- |
+| `TAG_ACC` | 91.75 |
+| `POS_ACC` | 92.78 |
+| `MORPH_ACC` | 94.04 |
+| `DEP_UAS` | 81.35 |
+| `DEP_LAS` | 72.39 |
+| `SENTS_P` | 83.31 |
+| `SENTS_R` | 89.27 |
+| `SENTS_F` | 86.18 |
+| `LEMMA_ACC` | 94.56 |
+| `TOK2VEC_LOSS` | 1320353.56 |
+| `TAGGER_LOSS` | 115881.62 |
+| `MORPHOLOGIZER_LOSS` | 227687.93 |
+| `PARSER_LOSS` | 1278412.94 |
+| `TRAINABLE_LEMMATIZER_LOSS` | 74574.32 |

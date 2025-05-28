@@ -1,0 +1,2 @@
+[spacy_models]
+id_nusantara = id_nusantara
