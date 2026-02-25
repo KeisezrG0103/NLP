@@ -33,7 +33,7 @@ st.markdown(
     "Single label klasifikasi teks menggunakan model Random Forest, SVM, dan Multinomial Naive Bayes.")
 
 # Sidebar for navigation
-page = st.sidebar.selectbox(
+page = st.sidebar.radio(
     "Choose a page", ["Dataset Explorer", "Model Training", "Prediction"])
 
 # Define preprocessing function
