@@ -44,7 +44,7 @@ with st.expander("View Dataset"):
 st.sidebar.header("Model Parameters")
 
 # Add a dropdown to select the vectorization method
-vectorization_method = st.sidebar.selectbox(
+vectorization_method = st.sidebar.radio(
     "Select Vectorization Method",
     ["Word2Vec", "Bag of Words", "TF-IDF", "GloVe"]
 )
