@@ -32,7 +32,7 @@ st.title("Automotive Reviews Multi-label Text Classification")
 st.markdown("multi label modul 2")
 
 # Sidebar for navigation
-page = st.sidebar.selectbox(
+page = st.sidebar.radio(
     "Choose a page", ["Dataset Explorer", "Model Training", "Prediction"])
 
 # Define preprocessing function
